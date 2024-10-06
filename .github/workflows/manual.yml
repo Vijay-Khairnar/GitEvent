@@ -22,4 +22,4 @@ jobs:
 
     - name: Upload file to S3
       run: |
-        aws s3 cp GitEvent/src/main/resources/ApplicationResource.properties://resourcebundle/prop --region us-east-1
+        aws s3 cp GitEvent/src/main/resources/ApplicationResource.properties s3://resourcebundle/prop/ApplicationResource.properties --region us-east-1
