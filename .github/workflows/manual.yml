@@ -3,7 +3,7 @@ name: Upload to S3 on Merge
 on:
   push:
     branches:
-      - main  # Specify the branch to trigger the action
+      - master  # Specify the branch to trigger the action
 
 jobs:
   upload-to-s3:
@@ -22,4 +22,4 @@ jobs:
 
     - name: Upload file to S3
       run: |
-        aws s3 cp path/to/your/file.txt s3://resourcebundle/prop --region us-east-1
+        aws s3 cp GitEvent/src/main/resources/ApplicationResource.properties://resourcebundle/prop --region us-east-1
